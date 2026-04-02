@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ALT-001",
+    "title": "Node CPU spike above 95%",
+    "description": "Host prod-node-03 sustained CPU utilization above 95% for 5 minutes.",
+    "source": "prod-node-03",
+    "timestamp": "2025-04-02T08:12:00Z",
+    "metadata": {}
+  },
+  {
+    "id": "ALT-002",
+    "title": "Payment service is down — 5xx error rate 100%",
+    "description": "All requests to payment-service returning 500. Last deploy 12 min ago.",
+    "source": "payment-service",
+    "timestamp": "2025-04-02T08:14:00Z",
+    "metadata": {}
+  },
+  {
+    "id": "ALT-003",
+    "title": "Brute-force login attempts detected",
+    "description": "500+ failed auth attempts in 60s from IP 203.0.113.42.",
+    "source": "auth-service",
+    "timestamp": "2025-04-02T08:15:00Z",
+    "metadata": { "source_ip": "203.0.113.42" }
+  },
+  {
+    "id": "ALT-004",
+    "title": "API gateway p99 latency degraded",
+    "description": "p99 latency on /api/v2/orders has climbed to 4.2s, SLA is 500ms.",
+    "source": "api-gateway",
+    "timestamp": "2025-04-02T08:17:00Z",
+    "metadata": {}
+  },
+  {
+    "id": "ALT-005",
+    "title": "Disk full on log aggregation host",
+    "description": "Disk usage on log-node-01 is at 99%. Log writes are failing.",
+    "source": "log-node-01",
+    "timestamp": "2025-04-02T08:20:00Z",
+    "metadata": {}
+  },
+  {
+    "id": "ALT-006",
+    "title": "Deployment started for recommendation-service",
+    "description": "CI/CD pipeline triggered restart of recommendation-service v2.4.1.",
+    "source": "recommendation-service",
+    "timestamp": "2025-04-02T08:25:00Z",
+    "metadata": {}
+  },
+  {
+    "id": "ALT-007",
+    "title": "TLS certificate expiring in 3 days",
+    "description": "TLS cert for api.example.com expires 2025-04-05. Auto-renewal failed.",
+    "source": "cert-manager",
+    "timestamp": "2025-04-02T08:30:00Z",
+    "metadata": {}
+  },
+  {
+    "id": "ALT-008",
+    "title": "Queue depth warning — order processing queue",
+    "description": "SQS queue orders-processing-queue depth is 12,000, threshold is 5,000.",
+    "source": "order-processor",
+    "timestamp": "2025-04-02T08:35:00Z",
+    "metadata": {}
+  }
+]

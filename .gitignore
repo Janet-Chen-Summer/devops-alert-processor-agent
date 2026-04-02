@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+.env
+*.egg-info/
+dist/
+*.pid
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+*.log
+alert-results/
+
+# OS
+.DS_Store
+Thumbs.db

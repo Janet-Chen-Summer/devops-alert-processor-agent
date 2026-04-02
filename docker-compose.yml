@@ -1,0 +1,24 @@
+services:
+  agent:
+    build: .
+    container_name: devops-alert-agent
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./mock_data:/app/mock_data:ro
+      - alert-results:/tmp
+    restart: "no"
+
+  test:
+    build: .
+    container_name: devops-alert-agent-tests
+    command: ["python", "-m", "pytest", "tests/", "-v", "--tb=short"]
+    environment:
+      - PYTHONUNBUFFERED=1
+    profiles:
+      - test
+    restart: "no"
+
+volumes:
+  alert-results:
